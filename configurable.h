@@ -9,7 +9,9 @@ public:
     Configurable(Configuration  &configObj);
     Configurable(const Configurable &) = delete;
 
-    Configuration& configuration();
+
+protected:
+    Configuration& configuration() const;
 
 private:
 
