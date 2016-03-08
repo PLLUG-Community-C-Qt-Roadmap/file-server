@@ -8,6 +8,9 @@ class Configurable
 public:
     Configurable(Configuration  &configObj);
     Configurable(const Configurable &) = delete;
+
+    Configuration& configuration();
+
 private:
 
     Configuration &mConfigObj;
