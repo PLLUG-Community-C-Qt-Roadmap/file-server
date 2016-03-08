@@ -4,23 +4,24 @@
 #include<commandlinereader.h>
 #include<string>
 #include<boost/asio.hpp>
+
 using namespace std;
 using namespace boost::asio;
+
 int main(int argc , char* argv[])
 {
     try
     {
-  CommandLineReader commandReader(atoi(argv[2]),argv[4]);
-  Configuration config;
-  commandReader.configInitialization(config);
-  FileWebServer server(config);
-  server.run();
-}
-  catch (std::exception& e)
-  {
-    std::cerr << e.what() << std::endl;
-  }
-    system("pause");
+        CommandLineReader commandReader(argc, argv);
+        Configuration config;
+        commandReader.configInitialization(config);
+        FileWebServer server(config);
+        server.run();
+    }
+    catch (std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
     return 0;
 }
 
