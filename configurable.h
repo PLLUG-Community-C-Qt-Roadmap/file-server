@@ -6,11 +6,11 @@
 class Configurable
 {
 public:
-    Configurable(const Configuration  &configObj);
+    Configurable(Configuration  &configObj);
     Configurable(const Configurable &) = delete;
 private:
 
-    Configuration mConfigObj;
+    Configuration &mConfigObj;
 };
 
 #endif // CONFIGURABLE_H

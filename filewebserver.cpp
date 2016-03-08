@@ -1,7 +1,7 @@
 #include "filewebserver.h"
 using namespace boost::asio;
 FileWebServer::FileWebServer( Configuration &configObj):Configurable(configObj),
-mPort(configObj.getPort()),mipAddress(configObj.getIpAddress()),mDocRoot(configObj.getDocRoot())
+mPort(configObj.port()),mipAddress(configObj.ipAddress()),mDocRoot(configObj.docRoot())
 {
 
 mSocket = new ip::tcp::socket(m_io_service);

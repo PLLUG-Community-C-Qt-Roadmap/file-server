@@ -20,17 +20,17 @@ void Configuration::setDocRoot(std::string docRoot)
     mDocRoot = docRoot;
 }
 
-std::string Configuration::getIpAddress()
+std::string Configuration::ipAddress() const
 {
     return mIpAddress;
 }
 
-int Configuration::getPort()
+int Configuration::port() const
 {
     return mPort;
 }
 
-std::string Configuration::getDocRoot()
+std::string Configuration::docRoot() const
 {
     return mDocRoot;
 }

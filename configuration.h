@@ -9,9 +9,9 @@ public:
     void setIpAddress(std::string ipAddress);
     void setPort(int port);
     void setDocRoot(std::string docRoot);
-    std::string getIpAddress();
-    int getPort();
-    std::string getDocRoot();
+    std::string ipAddress() const ;
+    int port() const ;
+    std::string docRoot() const;
 
 
 private:
