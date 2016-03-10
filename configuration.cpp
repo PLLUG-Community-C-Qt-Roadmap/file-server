@@ -1,6 +1,6 @@
 #include "configuration.h"
 
-Configuration::Configuration():mIP("0.0.0.0"),mPort(0),mDocRoot("")
+Configuration::Configuration()
 {
 
 }

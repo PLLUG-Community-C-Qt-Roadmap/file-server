@@ -1,6 +1,6 @@
 #include "configurable.h"
 
-Configurable::Configurable(Configuration &configObj): mConfigObj(configObj)
+Configurable::Configurable(const Configuration &configObj): mConfigObj(configObj)
 {
 }
 

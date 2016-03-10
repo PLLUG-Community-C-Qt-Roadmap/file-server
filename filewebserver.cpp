@@ -1,10 +1,10 @@
 #include "filewebserver.h"
 using namespace boost::asio;
-FileWebServer::FileWebServer(Configuration &configObj):
+FileWebServer::FileWebServer(const Configuration &configObj):
     Configurable(configObj)
 {
     mSocket = new ip::tcp::socket(m_io_service);
-    mAcceptor = new ip::tcp ::acceptor(m_io_service,ip::tcp::endpoint(ip::tcp::v4(), configObj.port()));
+    mAcceptor = new ip::tcp ::acceptor(m_io_service,ip::tcp::endpoint(ip::tcp::v4(), port()));
 }
 
 void FileWebServer::run()
@@ -22,7 +22,6 @@ void FileWebServer::run()
 
 void FileWebServer::printDirectoryTree()
 {
-
     std::string header = "<html>\n<head><title>This is title</title></head>\n<body>";
     std::string footer = "</body>\n</html>\n";
     std::string html = header + docRoot() + footer;

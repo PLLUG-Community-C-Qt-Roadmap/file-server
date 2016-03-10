@@ -2,7 +2,7 @@
 
 CommandLineReader::CommandLineReader(int argc, char *argv[])
 {
-    std::string configFileName = "no config file";
+    std::string configFileName;
 
     po::options_description desc("Allowed options");
     desc.add_options()

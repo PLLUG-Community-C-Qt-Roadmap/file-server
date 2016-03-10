@@ -6,7 +6,7 @@
 class Configurable
 {
 public:
-    Configurable(Configuration  &configObj);
+    Configurable(const Configuration  &configObj);
     Configurable(const Configurable &) = delete;
 
     int port() const;
@@ -19,7 +19,7 @@ public:
     bool visibleInfo() const;
 
 private:
-    Configuration &mConfigObj;
+    Configuration mConfigObj;
 
 };
 
