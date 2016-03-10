@@ -32,13 +32,16 @@ CommandLineReader::CommandLineReader(int argc, char *argv[])
                   << desc << std::endl;
         exit(1);
     }
-    if (vm.count("about"))
+    else
     {
-        //print readme info func
-        exit(1);
+        if (vm.count("about"))
+        {
+            //print readme info func
+            exit(1);
+        }
     }
 
-    po::notify(vm); //throws on error, so so do after help in case there are any problems
+    po::notify(vm); //throws on error, so do after help in case there are any problems
 
     if (vm.count("config"))
     {
