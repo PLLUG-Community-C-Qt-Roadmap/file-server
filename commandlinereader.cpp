@@ -9,8 +9,7 @@ CommandLineReader::CommandLineReader(int argc, char *argv[])
             ("help", "Produce help message")
             ("about", "Output README information")
             ("port", po::value<int>(&mPort)->default_value(8080), "Port server use to connect to clinets")
-            ("dir", po::value<std::string>(&mDocRoot)->required(), "Set root folder")
-            ("ip", po::value<std::string>(&mIP)->default_value("127.0.0.1"), "Set ip")
+            ("dir", po::value<std::string>(&mDocRoot)->required(), "Set root folder")            
             ("config", po::value<std::string>(&configFileName), "Read options from config file")
             ("dpermission", po::value<bool>(&mDownloadPermission)->default_value(true),
                                                                      "set permission to download files")
@@ -63,7 +62,6 @@ CommandLineReader::CommandLineReader(int argc, char *argv[])
 void CommandLineReader::configInitialization(Configuration &configObj)
 {
     configObj.setPort(mPort);
-    configObj.setIpAddress(mIP);
     configObj.setDocRoot(mDocRoot);
     configObj.setUnit(mUnit);
     configObj.setDownloadPermission(mDownloadPermission);

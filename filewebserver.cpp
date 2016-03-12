@@ -30,6 +30,5 @@ void FileWebServer::printDirectoryTree()
     mMainText << "content-length: " << html.length() << std::endl;
     mMainText << std::endl;
     mMainText << html;
-
 }
 

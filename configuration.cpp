@@ -5,11 +5,6 @@ Configuration::Configuration()
 
 }
 
-void Configuration::setIpAddress(const std::string &ipAddress)
-{
-    mIP = ipAddress;
-}
-
 void Configuration::setPort(const int &port)
 {
     mPort = port;
@@ -43,11 +38,6 @@ void Configuration::setVisibleSize(const bool &v)
 void Configuration::setVisibleInfo(const bool &v)
 {
     mVisibleInfo = v;
-}
-
-std::string Configuration::ipAddress() const
-{
-    return mIP;
 }
 
 int Configuration::port() const

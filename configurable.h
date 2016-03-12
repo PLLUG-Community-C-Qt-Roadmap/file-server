@@ -10,7 +10,6 @@ public:
     Configurable(const Configurable &) = delete;
 
     int port() const;
-    std::string ipAddress() const;
     std::string docRoot() const;
     std::string unit() const;
     bool downloadPermission() const;

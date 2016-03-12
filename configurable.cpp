@@ -9,11 +9,6 @@ int Configurable::port() const
     return mConfigObj.port();
 }
 
-std::string Configurable::ipAddress() const
-{
-    return mConfigObj.ipAddress();
-}
-
 std::string Configurable::docRoot() const
 {
     return mConfigObj.docRoot();

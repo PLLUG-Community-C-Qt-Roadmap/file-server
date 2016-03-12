@@ -15,7 +15,6 @@ public:
 
 private:
     int mPort;
-    std::string mIP;
     std::string mDocRoot;
     std::string mUnit;
 

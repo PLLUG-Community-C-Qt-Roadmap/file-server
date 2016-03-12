@@ -7,7 +7,6 @@ class Configuration
 public:
     Configuration();
     void setPort(const int &port);
-    void setIpAddress(const std::string &ipAddress);
     void setDocRoot(const std::string &docRoot);
     void setUnit(const std::string &unit);
     void setDownloadPermission(const bool &p);
@@ -16,7 +15,6 @@ public:
     void setVisibleInfo(const bool &v);
 
     int port() const ;
-    std::string ipAddress() const ;
     std::string docRoot() const;
     std::string unit() const;
     bool downloadPermission() const;
@@ -26,7 +24,6 @@ public:
 
 private:
     int mPort;
-    std::string mIP;
     std::string mDocRoot;
     std::string mUnit;
 
