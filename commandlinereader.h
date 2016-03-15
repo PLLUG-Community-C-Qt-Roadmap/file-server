@@ -19,7 +19,6 @@ public:
 
 private:
     ConfigurationFileReader *configFileReader;
-    bool configFileReaderIsSet;
 };
 
 #endif // COMMANDLINEREADER_H

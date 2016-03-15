@@ -1,7 +1,7 @@
 #include "commandlinereader.h"
 
 CommandLineReader::CommandLineReader(int argc, char *argv[]):
-    configFileReaderIsSet(false)
+    configFileReader(nullptr)
 {
     po::options_description generic("Generic options");
     generic.add_options()
@@ -47,7 +47,6 @@ CommandLineReader::CommandLineReader(int argc, char *argv[]):
 
     if (vm.count("config"))
     {
-        configFileReaderIsSet = true;
         configFileReader = new ConfigurationFileReader(vm["config"].as<std::string>());
     }
     else
@@ -68,7 +67,7 @@ CommandLineReader::CommandLineReader(int argc, char *argv[]):
 
 CommandLineReader::~CommandLineReader()
 {
-    if (configFileReaderIsSet)
+    if (configFileReader)
     {
         delete configFileReader;
     }
@@ -76,7 +75,7 @@ CommandLineReader::~CommandLineReader()
 
 void CommandLineReader::configInitialization(Configuration &configObj)
 {
-    if (configFileReaderIsSet)
+    if (configFileReader)
     {
         configFileReader->configInitialization(configObj);
     }
