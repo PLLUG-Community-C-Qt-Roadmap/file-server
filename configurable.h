@@ -6,11 +6,20 @@
 class Configurable
 {
 public:
-    Configurable(Configuration  &configObj);
+    Configurable(const Configuration  &configObj);
     Configurable(const Configurable &) = delete;
-private:
 
-    Configuration &mConfigObj;
+    int port() const;
+    std::string docRoot() const;
+    std::string unit() const;
+    bool downloadPermission() const;
+    bool visibleIcon() const;
+    bool visibleSize() const;
+    bool visibleInfo() const;
+
+private:
+    Configuration mConfigObj;
+
 };
 
 #endif // CONFIGURABLE_H
