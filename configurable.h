@@ -8,6 +8,11 @@ class Configurable
 public:
     Configurable(Configuration  &configObj);
     Configurable(const Configurable &) = delete;
+
+
+protected:
+    const Configuration& configuration();
+
 private:
 
     Configuration &mConfigObj;

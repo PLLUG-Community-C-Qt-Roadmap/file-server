@@ -14,14 +14,20 @@ endif ()
 
 
 set (Boost_USE_STATIC_LIBS ON)
-set (Boost_USE_MULTITHREADED ON)
-set (Boost_USE_STATIC_RUNTIME OFF)
+#set (Boost_USE_MULTITHREADED ON)
+#set (Boost_USE_STATIC_RUNTIME OFF)
 
+#add_subdirectory(C:/Users/Max/Documents/QT/file-server/mstch)
+#include_directories(${mstch_INCLUDE_DIR})
 
 find_package (Boost 1.60.0 REQUIRED  COMPONENTS regex date_time filesystem system)
+
+
 
 include_directories(${Boost_INCLUDE_DIRS})
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})
 
 target_link_libraries (${PROJECT_NAME} ${Boost_LIBRARIES})
+
+#target_link_libraries(${PROJECT_NAME} mstch)

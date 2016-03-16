@@ -15,6 +15,7 @@ int main(int argc , char* argv[])
   commandReader.configInitialization(config);
   FileWebServer server(config);
   server.run();
+
 }
   catch (std::exception& e)
   {
