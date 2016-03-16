@@ -4,7 +4,7 @@ Configurable::Configurable(Configuration &configObj):mConfigObj(configObj)
 {
 }
 
-Configuration& Configurable::configuration()const
+const Configuration& Configurable::configuration()
 {
     return mConfigObj;
 }

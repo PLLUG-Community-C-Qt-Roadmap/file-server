@@ -11,7 +11,7 @@ public:
 
 
 protected:
-    Configuration& configuration() const;
+    const Configuration& configuration();
 
 private:
 
